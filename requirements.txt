@@ -1,0 +1,5 @@
+streamlit
+folium
+pandas
+beautifulsoup4
+requests

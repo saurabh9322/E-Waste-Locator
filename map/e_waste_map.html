@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1dba1ab6b5b4e0221b6d4be30c39053 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d1dba1ab6b5b4e0221b6d4be30c39053" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d1dba1ab6b5b4e0221b6d4be30c39053 = L.map(
+                "map_d1dba1ab6b5b4e0221b6d4be30c39053",
+                {
+                    center: [21.1458, 79.0882],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ffe2895052a52b3dd150ff7f2ea8b6cc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ffe2895052a52b3dd150ff7f2ea8b6cc.addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+            var marker_5d5d85403523a3bc85650121754ccf0d = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_7561b91d8ad78b352eee9c735a684f08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d980c091daefd011dcd9549e664e091a = $(`<div id="html_d980c091daefd011dcd9549e664e091a" style="width: 100.0%; height: 100.0%;">Green Earth Recyclers<br>IT Park Road, Nagpur</div>`)[0];
+                popup_7561b91d8ad78b352eee9c735a684f08.setContent(html_d980c091daefd011dcd9549e664e091a);
+            
+        
+
+        marker_5d5d85403523a3bc85650121754ccf0d.bindPopup(popup_7561b91d8ad78b352eee9c735a684f08)
+        ;
+
+        
+    
+    
+            marker_5d5d85403523a3bc85650121754ccf0d.bindTooltip(
+                `<div>
+                     Green Earth Recyclers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab6f533f21d66be08c9776aceeeba74a = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_e97ec592b858c1bca4f12e9e055efe10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_196ece1597004c2ff625aeb2d4d5f3bc = $(`<div id="html_196ece1597004c2ff625aeb2d4d5f3bc" style="width: 100.0%; height: 100.0%;">RecycleTech India<br>Shivaji Nagar, Pune</div>`)[0];
+                popup_e97ec592b858c1bca4f12e9e055efe10.setContent(html_196ece1597004c2ff625aeb2d4d5f3bc);
+            
+        
+
+        marker_ab6f533f21d66be08c9776aceeeba74a.bindPopup(popup_e97ec592b858c1bca4f12e9e055efe10)
+        ;
+
+        
+    
+    
+            marker_ab6f533f21d66be08c9776aceeeba74a.bindTooltip(
+                `<div>
+                     RecycleTech India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a169a86082f1139cb58cbca55f819e9b = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_b2b520453ce44a4d47b76e80cd0a151f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ef70a15c8d7f6490ccd8987bb9c6f1d = $(`<div id="html_0ef70a15c8d7f6490ccd8987bb9c6f1d" style="width: 100.0%; height: 100.0%;">EcoBin E-Waste<br>Andheri East, Mumbai</div>`)[0];
+                popup_b2b520453ce44a4d47b76e80cd0a151f.setContent(html_0ef70a15c8d7f6490ccd8987bb9c6f1d);
+            
+        
+
+        marker_a169a86082f1139cb58cbca55f819e9b.bindPopup(popup_b2b520453ce44a4d47b76e80cd0a151f)
+        ;
+
+        
+    
+    
+            marker_a169a86082f1139cb58cbca55f819e9b.bindTooltip(
+                `<div>
+                     EcoBin E-Waste
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_736bab94c2916e6cf8e3977b1766d31a = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_4241d4f25b013f29e8a908356dac2229 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bd4556939be8ccc380a4addd0bcf946 = $(`<div id="html_4bd4556939be8ccc380a4addd0bcf946" style="width: 100.0%; height: 100.0%;">Ecoreco Ltd<br>Goregaon East, Mumbai</div>`)[0];
+                popup_4241d4f25b013f29e8a908356dac2229.setContent(html_4bd4556939be8ccc380a4addd0bcf946);
+            
+        
+
+        marker_736bab94c2916e6cf8e3977b1766d31a.bindPopup(popup_4241d4f25b013f29e8a908356dac2229)
+        ;
+
+        
+    
+    
+            marker_736bab94c2916e6cf8e3977b1766d31a.bindTooltip(
+                `<div>
+                     Ecoreco Ltd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_67d0a7ec5470f10a2eed06e693fb1ed5 = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_ca885df3d09922fd4eb6e9d7c8ae008f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b6316a89bb35e8c36e58fb03d6dff0f = $(`<div id="html_1b6316a89bb35e8c36e58fb03d6dff0f" style="width: 100.0%; height: 100.0%;">E-Parisaraa Pvt Ltd<br>Dobbespet Industrial Area, Bangalore</div>`)[0];
+                popup_ca885df3d09922fd4eb6e9d7c8ae008f.setContent(html_1b6316a89bb35e8c36e58fb03d6dff0f);
+            
+        
+
+        marker_67d0a7ec5470f10a2eed06e693fb1ed5.bindPopup(popup_ca885df3d09922fd4eb6e9d7c8ae008f)
+        ;
+
+        
+    
+    
+            marker_67d0a7ec5470f10a2eed06e693fb1ed5.bindTooltip(
+                `<div>
+                     E-Parisaraa Pvt Ltd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1ac614cc3b93e08ae0f692d4ce2f4ddd = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_d4925d9781478f6357ec44bef6693775 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4e2c237c55953b0c1b8b620d70ec7b4 = $(`<div id="html_e4e2c237c55953b0c1b8b620d70ec7b4" style="width: 100.0%; height: 100.0%;">Greenscape Eco Mgmt<br>Udyog Vihar, Gurgaon</div>`)[0];
+                popup_d4925d9781478f6357ec44bef6693775.setContent(html_e4e2c237c55953b0c1b8b620d70ec7b4);
+            
+        
+
+        marker_1ac614cc3b93e08ae0f692d4ce2f4ddd.bindPopup(popup_d4925d9781478f6357ec44bef6693775)
+        ;
+
+        
+    
+    
+            marker_1ac614cc3b93e08ae0f692d4ce2f4ddd.bindTooltip(
+                `<div>
+                     Greenscape Eco Mgmt
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_080835581339a9bea2fd93be23ccd41e = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_ebcf8f697fbbdc805e4fdcf01ef7b58a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_439f3929d64e3b12a5e982be7301c7e6 = $(`<div id="html_439f3929d64e3b12a5e982be7301c7e6" style="width: 100.0%; height: 100.0%;">Hi-Tech Recycling<br>Balanagar, Hyderabad</div>`)[0];
+                popup_ebcf8f697fbbdc805e4fdcf01ef7b58a.setContent(html_439f3929d64e3b12a5e982be7301c7e6);
+            
+        
+
+        marker_080835581339a9bea2fd93be23ccd41e.bindPopup(popup_ebcf8f697fbbdc805e4fdcf01ef7b58a)
+        ;
+
+        
+    
+    
+            marker_080835581339a9bea2fd93be23ccd41e.bindTooltip(
+                `<div>
+                     Hi-Tech Recycling
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6f6e2c6ced8f7b1e394a504176d32820 = L.marker(
+                [21.1458, 79.0882],
+                {
+}
+            ).addTo(map_d1dba1ab6b5b4e0221b6d4be30c39053);
+        
+    
+        var popup_e293d48087f18934c30aab1ef3aebafd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baaaff8da25fe06d6ea9f4cc979d8751 = $(`<div id="html_baaaff8da25fe06d6ea9f4cc979d8751" style="width: 100.0%; height: 100.0%;">TES-AMM India<br>Kundli Industrial Area, Sonipat</div>`)[0];
+                popup_e293d48087f18934c30aab1ef3aebafd.setContent(html_baaaff8da25fe06d6ea9f4cc979d8751);
+            
+        
+
+        marker_6f6e2c6ced8f7b1e394a504176d32820.bindPopup(popup_e293d48087f18934c30aab1ef3aebafd)
+        ;
+
+        
+    
+    
+            marker_6f6e2c6ced8f7b1e394a504176d32820.bindTooltip(
+                `<div>
+                     TES-AMM India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
