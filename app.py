@@ -1,13 +1,13 @@
-
 import streamlit as st
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
-
 from geopy.geocoders import Nominatim
 
 # Load data
 df = pd.read_csv("data/e_waste_centers.csv")
+df['Latitude'] = df['Latitude'].astype(str).str.strip().astype(float)
+df['Longitude'] = df['Longitude'].astype(str).str.strip().astype(float)
 
 # Sidebar: City filter
 city_list = ['All'] + sorted(df['City'].unique().tolist())
@@ -19,19 +19,29 @@ search_term = st.sidebar.text_input("🔍 Search by Center Name")
 # Filter based on selection
 filtered_df = df.copy()
 if selected_city != 'All':
-    filtered_df = filtered_df[filtered_df['City'] == selected_city]
+    filtered_df = filtered_df[filtered_df['City'].str.lower() == selected_city.lower()]
 if search_term:
-    filtered_df = filtered_df[filtered_df['Name'].str.contains(search_term, case=False)]
+    filtered_df = filtered_df[filtered_df['Name'].str.lower().str.contains(search_term.lower())]
 
 # Title and subtitle
 st.markdown("<h1 style='text-align: center;'>📍 E-Waste Recycling Center Locator</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Search, filter and explore recycling facilities across India</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# Generate Map
-m = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
+# 🧠 Dynamic center & zoom
+if not filtered_df.empty:
+    center_lat = filtered_df['Latitude'].mean()
+    center_lon = filtered_df['Longitude'].mean()
+    zoom = 12
+else:
+    center_lat = 20.5937  # Default: India center
+    center_lon = 78.9629
+    zoom = 5
 
-# Add user location pin using Nominatim (optional)
+# Generate Map
+m = folium.Map(location=[center_lat, center_lon], zoom_start=zoom)
+
+# Add user location pin (Nagpur default)
 try:
     geolocator = Nominatim(user_agent="geoapi")
     user_location = geolocator.geocode("Nagpur, India")

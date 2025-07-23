@@ -1,20 +1,20 @@
-import pandas as pd
 import folium
+from folium.plugins import MarkerCluster
 
-def create_map(csv_path="data/e_waste_centers.csv", save_path="map/e_waste_map.html"):
-    df = pd.read_csv(csv_path)
-    m = folium.Map(location=[21.1458, 79.0882], zoom_start=5)
+def create_map():
+    df = pd.read_csv("data/e_waste_centers.csv")
+    df['Latitude'] = df['Latitude'].astype(str).str.strip().astype(float)
+    df['Longitude'] = df['Longitude'].astype(str).str.strip().astype(float)
+
+    m = folium.Map(location=[21.1458, 79.0882], zoom_start=6)
+
+    marker_cluster = MarkerCluster().add_to(m)
 
     for _, row in df.iterrows():
         folium.Marker(
-            location=[21.1458, 79.0882],  # static for now
-           popup=f"{row['Name']}<br>{row['Address']}",
+            location=[row["Latitude"], row["Longitude"]],
+            popup=f"{row['Name']}<br>{row['Address']}<br>{row['City']}",
+            icon=folium.Icon(color="green", icon="recycle", prefix='fa')
+        ).add_to(marker_cluster)
 
-            tooltip=row['Name']
-        ).add_to(m)
-
-    m.save(save_path)
-    print(f"Map saved to {save_path}")
-
-if __name__ == "__main__":
-    create_map()
+    m.save("map/e_waste_map.html")
